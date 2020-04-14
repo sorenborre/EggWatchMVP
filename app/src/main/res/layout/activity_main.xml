@@ -4,16 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
     tools:context=".Views.MainActivity">
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/text_choice"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
-        android:text="Choose egg"
+        android:text="@string/choose_egg"
         android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -21,13 +22,13 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
-        android:id="@+id/linearLayout2"
+        android:id="@+id/linearLayout"
         android:layout_width="383dp"
         android:layout_height="117dp"
         android:layout_marginTop="16dp"
-        app:layout_constraintEnd_toEndOf="@+id/textView2"
-        app:layout_constraintStart_toStartOf="@+id/textView2"
-        app:layout_constraintTop_toBottomOf="@+id/textView2">
+        app:layout_constraintEnd_toEndOf="@+id/text_choice"
+        app:layout_constraintStart_toStartOf="@+id/text_choice"
+        app:layout_constraintTop_toBottomOf="@+id/text_choice">
 
         <ImageButton
             android:id="@+id/soft_boiled"
@@ -39,7 +40,7 @@
             android:background="#00FFFFFF"
             android:scaleType="fitCenter"
             android:src="@drawable/ic_soft"
-            android:text="Button" />
+            android:text="@string/soft_boiled_button" />
 
         <ImageButton
             android:id="@+id/medium_boiled"
@@ -51,10 +52,10 @@
             android:scaleType="fitCenter"
 
             android:src="@drawable/ic_medium"
-            android:text="Button" />
+            android:text="@string/medium_boiled_button" />
 
         <ImageButton
-            android:id="@+id/hardboiled"
+            android:id="@+id/hard_boiled"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
@@ -62,42 +63,50 @@
             android:background="#00FFFFFF"
             android:scaleType="fitCenter"
             android:src="@drawable/ic_hard"
-            android:text="Button" />
+            android:text="@string/hard_boiled_button" />
 
     </LinearLayout>
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/text_countdown_timer"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="00:00"
+        android:text="@string/init_time"
         android:textAlignment="center"
         android:textAllCaps="false"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@+id/reset"
+        android:textSize="60sp"
+        app:layout_constraintBottom_toTopOf="@+id/stop"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
     <Button
         android:id="@+id/start_timer"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:text="Start"
+        android:layout_width="136dp"
+        android:layout_height="85dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginBottom="30dp"
+        android:background="@color/colorAccent"
+        android:fontFamily="serif"
+        android:text="@string/start"
+        android:textSize="36sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/reset"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:text="reset"
-        app:layout_constraintBottom_toTopOf="@+id/start_timer"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:visibility="visible" />
-    <!--        android:visibility="invisible"-->
+        android:id="@+id/stop"
+        android:layout_width="136dp"
+        android:layout_height="85dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="30dp"
+
+        android:background="@color/colorAccent"
+        android:fontFamily="serif"
+        android:text="@string/stop"
+        android:textColor="@android:color/background_dark"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
